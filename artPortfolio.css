@@ -1,7 +1,14 @@
 body {
     background: #fff;
 }
+.container {
+    padding: 10px 10%;
+}
 
+nav {
+    display: flex;
+    align-items: center;
+}
 
 #art-portfolio{
     padding: 50px 0;
