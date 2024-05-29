@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Maddison Taylor Portfolio</title>
+        <script src="https://kit.fontawesome.com/4054d00006.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio Projects</a></li>
+                        <li><a href="artPortfolio.html">Art Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    
+                    <p>Junior Web Developer</p>
+                    <h1>Maddison Taylor</h1>
+                </div>
+    
+            </div>
+        </div>
+
+      
+        <!------about------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/ProfilePicture.jpg" >
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>
+
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                            <p class="tab-links" onclick="opentab('other')">Other</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development Fundamentals</span><br>HTML, CSS, JavaScript </li>
+                                <li class="icons"><i class="fa-brands fa-html5"></i>   <i class="fa-brands fa-css3-alt"></i>   <i class="fa-brands fa-js"></i></li>
+                                <li><span>JavaScript Frameworks & Toolkits</span><br>React.JS, Redux.JS, Webpack.JS</li>
+                                <li class="icons"><i class="fa-brands fa-react"></i></li>
+                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>BSc Applied Mathematics & Computing and Information Systems</span><br>Athabasca University <br>2025 Completion</li>
+                              
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="certificates">
+                            <ul>
+                                <li><span>Front-End Engineer</span><br>CodeCademy Professional Certificate <br>Completed</li>
+                                <li><span>Full-Stack Engineer</span><br>CodeCademy Professional Certificate <br>67% Complete <br>July 2024 Completion</li>
+                                <li><span>Machine Learning & AI Engineer</span><br>CodeCademy Professional Certificate <br>25% Complete <br>July 2024 Completion</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="other">
+                            <ul>
+                                <li>Procreate</li>
+                                <li>Microsoft</li>
+                                <li>other</li>
+                               
+                            </ul>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!--------portfolio -------->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="subtitle">Portfolio Projects</h1>
+                <div class="projects-list">
+                    <div>
+                        <h2>Some project</h2>
+                        <p>Description</p>
+                        <a href="#">Click to View</a>
+                    </div>
+                    <div>
+                        <h2>Some project 2</h2>
+                        <p>Description</p>
+                        <a href="#">Click to View</a>
+                    </div>
+                    <div>
+                        <h2>Some project 3</h2>
+                        <p>Description</p>
+                        <a href="#">Click to View</a>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="btn">See More</a>
+            </div>
+        </div>
+
+
+
+    <!------------contact--------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> madditaylor777@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile-retro"></i> 403-819-6916</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/madditaylor7/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+
+                    </div>
+                    <a href="images/2024Resume.pdf" download class="btn btn2" target="_blank">Download Resume</a>
+                
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="10" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="message"></span>
+                </div>
+            </div>
+        </div>
+        <div class="mads">Made by Maddison Taylor</div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+       
+        
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwo5ywJq6hNHhtW0LSIaL_2-j-Mga9XxOmYSoVK-x4hRJT0ur4jY598X5JnquMGax21/exec';
+        const form = document.forms['submit-to-google-sheet']
+        const message = document.getElementById("message")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                message.innerHTML = "Message Sent"
+                setTimeout(function() {
+                    message.innerHTML = ""
+                }, 3000)
+                form.reset()
+            
+        })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    </body>
+</html>
+
